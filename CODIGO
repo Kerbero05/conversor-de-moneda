@@ -1,0 +1,101 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        String transaccion = "CAMBIO DE MONEDA";
+        int opcion = 0;
+
+        System.out.println("********************+++++++++++++++************************************");
+        System.out.println("                BIENVENIDO A SU CASA DE CAMBIO ALURA                   ");
+        System.out.println("*************************+++++++++++++++*******************************");
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Nombre de usuario por favor: ");
+        String nombre = entrada.nextLine();
+        System.out.println("[                          Acceso autorizado                          ]");
+        System.out.println("");
+        System.out.println("Nombre del usuario: " + nombre);
+        System.out.println("transaccion a realizar: " + transaccion);
+        System.out.println("-----------------------------------------------------------------------");
+
+        String menu = """ 
+       [ $ = PESO COLOMBIANO] [ US = DOLLAR AMERICANO] [€ = EURO ] [ ¥ = YEN ] 
+       
+       Selecione una opcion del menu:
+       
+       1 - $ >>> US
+       2 - $ <<< US
+       3 - $ >>> €
+       4 - $ <<< €
+       5 - $ >>> ¥
+       6 - $ <<< ¥
+       9 - Salir
+       
+       NOTA: Recuerde proteger sus credenciales de personas extrañas
+       """;
+                while (opcion != 9){
+                    System.out.println(menu);
+                    opcion = entrada.nextInt();
+
+                    switch(opcion){
+                        case 1:
+                            System.out.println("Valor del cambio en pesos colombianos: ");
+                            double pesoADollar = entrada.nextDouble();
+                            System.out.println("=======================================================================");
+                            System.out.println("Su nuevo saldo en US: " + pesoADollar);
+                            System.out.println("=======================================================================");
+                            System.out.println("");
+                            break;
+                        case 2:
+                            System.out.println("Valor del cambio en dollar americano: ");
+                            double dollarAPeso = entrada.nextDouble();
+                            System.out.println("=======================================================================");
+                            System.out.println("Su nuevo saldo en $: " + dollarAPeso);
+                            System.out.println("=======================================================================");
+                            System.out.println("");
+                            break;
+                        case 3:
+                            System.out.println("Valor del cambio en pesos colombianos: ");
+                            double pesoAEuro = entrada.nextDouble();
+                            System.out.println("=======================================================================");
+                            System.out.println("Su nuevo saldo en €: " + pesoAEuro);
+                            System.out.println("=======================================================================");
+                            System.out.println("");
+                            break;
+                        case 4:
+                            System.out.println("Valor del cambio en euros: ");
+                            double euroAPeso = entrada.nextDouble();
+                            System.out.println("=======================================================================");
+                            System.out.println("Su nuevo saldo en $: " + euroAPeso);
+                            System.out.println("=======================================================================");
+                            System.out.println("");
+                            break;
+                        case 5:
+                            System.out.println("Valor del cambio en pesos colombianos: ");
+                            double pesoAYen = entrada.nextDouble();
+                            System.out.println("=======================================================================");
+                            System.out.println("Su nuevo saldo en ¥: " + pesoAYen);
+                            System.out.println("=======================================================================");
+                            System.out.println("");
+                            break;
+                        case 6:
+                            System.out.println("Valor del cambio en yenes: ");
+                            double yenAPeso = entrada.nextDouble();
+                            System.out.println("=======================================================================");
+                            System.out.println("Su nuevo saldo en $: " + yenAPeso);
+                            System.out.println("=======================================================================");
+                            System.out.println("");
+                            break;
+                        case 9:
+                            System.out.println("Finalizando el programa, Gracias por utilizar nuestros servicios");
+                            break;
+                        default:
+                            System.out.println("Opcion NO valida");
+
+                    }
+                }
+    }
+
+}
